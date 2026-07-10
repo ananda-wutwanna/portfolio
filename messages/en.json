@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "title": "Ananda Wutwanna — IoT Imagineer · Automation & Integration",
+    "description": "IoT engineer building automation control platforms and system integrations — coordinating devices and robots over MQTT / Modbus, from edge firmware to the systems that orchestrate them."
+  },
+  "nav": {
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact",
+    "resume": "Resume",
+    "menu": "Menu",
+    "close": "Close"
+  },
+  "hero": {
+    "boot": "system online — devices connected",
+    "role": "IoT Imagineer",
+    "tagline": "I analyze, design, and build systems across both the software and the hardware they control — from device control programs up to the platform that commands and monitors it all.",
+    "viewProjects": "View Projects",
+    "downloadResume": "Download Resume",
+    "location": "Samut Sakhon, Thailand",
+    "availability": "Open to work"
+  },
+  "sections": {
+    "aboutLabel": "About",
+    "skillsLabel": "Capabilities",
+    "projectsLabel": "Selected Work",
+    "experienceLabel": "Timeline",
+    "contactLabel": "Contact"
+  },
+  "about": {
+    "heading": "I design and build systems across software and hardware.",
+    "body": "An engineer who analyzes, designs, and builds systems around what they actually need to do. I like seeing the whole picture — working out what a job really needs, then building the pieces so they work together. I've worked both sides of it: on the hardware side, writing the programs that drive devices like motors, valves, and sensors and handling the communication between them; on the software side, building the frontend and backend, the APIs, and the platforms that command and monitor everything in real time. I can take a system from gathering requirements and designing the architecture, to writing the code, to installing and troubleshooting it on-site.",
+    "educationLabel": "Education",
+    "education": "B.Eng. in Computer Engineering",
+    "educationOrg": "Naresuan University",
+    "educationYears": "2016 – 2020"
+  },
+  "skills": {
+    "heading": "What I work with",
+    "note": "Built across protocols, integration, backend, firmware, and field commissioning."
+  },
+  "projects": {
+    "heading": "Systems I've shipped",
+    "featured": "Featured",
+    "note": "Case studies from production deployments and lab work.",
+    "labels": {
+      "role": "Role",
+      "period": "Period",
+      "problem": "Problem",
+      "built": "What I built",
+      "result": "Result",
+      "stack": "Stack",
+      "repo": "Repository",
+      "systems": "Systems"
+    }
+  },
+  "experience": {
+    "heading": "Where I've built things",
+    "present": "Present"
+  },
+  "contact": {
+    "heading": "Open to IoT / embedded / automation roles — let's talk.",
+    "body": "If you're building devices, controllers, or the platforms that run them, I'd like to hear about it.",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "locationLabel": "Location",
+    "location": "Samut Sakhon, Thailand",
+    "githubLabel": "GitHub",
+    "linkedinLabel": "LinkedIn",
+    "emailCta": "Send an email"
+  },
+  "footer": {
+    "built": "Built with Next.js — statically exported.",
+    "rights": "All rights reserved."
+  }
+}

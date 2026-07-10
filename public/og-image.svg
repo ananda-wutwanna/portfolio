@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0A0B0A"/>
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#35D07F" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+    <radialGradient id="glow" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#35D07F" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#35D07F" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <g font-family="'JetBrains Mono', ui-monospace, monospace">
+    <text x="80" y="90" font-size="20" letter-spacing="6" fill="#8B948B">SAMUT SAKHON · THAILAND</text>
+    <line x1="80" y1="110" x2="1120" y2="110" stroke="#262C25" stroke-width="2"/>
+    <text x="78" y="200" font-size="24" letter-spacing="4" fill="#35D07F">$ system online — firmware loaded</text>
+  </g>
+  <text x="76" y="330" font-family="'Space Grotesk', Inter, sans-serif" font-size="92" font-weight="700" fill="#ECEFE9">Ananda Wutwanna</text>
+  <text x="80" y="400" font-family="'JetBrains Mono', monospace" font-size="30" fill="#35D07F">IoT &amp; Embedded Systems Engineer</text>
+  <text x="80" y="470" font-family="Inter, sans-serif" font-size="28" fill="#8B948B">Firmware &amp; control platforms for industrial automation.</text>
+  <line x1="80" y1="520" x2="1120" y2="520" stroke="#262C25" stroke-width="2"/>
+  <text x="80" y="560" font-family="'JetBrains Mono', monospace" font-size="22" fill="#ECEFE9">ESP32 · FreeRTOS · MQTT · Modbus · FastAPI · React</text>
+</svg>
