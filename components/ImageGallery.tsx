@@ -4,7 +4,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 import Image from 'next/image';
 import { ChevronLeft, ChevronRight, Play, X } from 'lucide-react';
-import type { Locale } from '@/lib/i18n';
+import { withBase, type Locale } from '@/lib/i18n';
 
 type L = Record<Locale, string>;
 
@@ -115,7 +115,7 @@ export default function ImageGallery({
             className="group/thumb relative aspect-square cursor-zoom-in overflow-hidden rounded-md border border-hairline"
           >
             <Image
-              src={isVideo ? (item as GalleryVideo).poster : item.src}
+              src={withBase(isVideo ? (item as GalleryVideo).poster : item.src)}
               alt={item.alt[locale]}
               fill
               sizes="(min-width: 1024px) 140px, 30vw"
@@ -168,8 +168,8 @@ export default function ImageGallery({
               {isVideo ? (
                 <video
                   key={current.src}
-                  src={current.src}
-                  poster={(current as GalleryVideo).poster}
+                  src={withBase(current.src)}
+                  poster={withBase((current as GalleryVideo).poster)}
                   controls
                   autoPlay
                   muted
@@ -178,7 +178,7 @@ export default function ImageGallery({
                 />
               ) : (
                 <Image
-                  src={current.src}
+                  src={withBase(current.src)}
                   alt={current.alt[locale]}
                   fill
                   sizes="100vw"

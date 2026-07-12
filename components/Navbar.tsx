@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { Menu, X, FileDown } from 'lucide-react';
-import type { Dictionary, Locale } from '@/lib/i18n';
+import { withBase, type Dictionary, type Locale } from '@/lib/i18n';
 import { site } from '@/data/site';
 import LangToggle from './LangToggle';
 import ThemeToggle from './ThemeToggle';
@@ -58,7 +58,7 @@ export default function Navbar({
           aria-label={site.name[locale]}
         >
           <Image
-            src="/profile.jpg"
+            src={withBase('/profile.jpg')}
             alt={site.name[locale]}
             width={36}
             height={36}
