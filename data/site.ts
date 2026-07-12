@@ -9,8 +9,6 @@ export const site = {
   email: 'anandawwutwanna@gmail.com',
   phone: '082-592-4747',
   phoneHref: '+66825924747',
-  linkedin: 'https://www.linkedin.com/in/ananda-wutwanna-156847343/',
-  linkedinHandle: 'ananda-wutwanna',
   // Resume files live in public/resume/. Bump resumeVersion whenever the
   // PDFs are replaced so browsers fetch the new files instead of a cached copy.
   resumeVersion: '2026-07-12.6',

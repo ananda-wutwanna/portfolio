@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Linkedin, ArrowUpRight } from 'lucide-react';
+import { Mail, Phone, MapPin, ArrowUpRight } from 'lucide-react';
 import type { Dictionary, Locale } from '@/lib/i18n';
 import { site } from '@/data/site';
 import SectionHeader from './SectionHeader';
@@ -29,13 +29,6 @@ export default function Contact({
       label: t.contact.locationLabel,
       value: t.contact.location,
     },
-    {
-      icon: Linkedin,
-      label: t.contact.linkedinLabel,
-      value: site.linkedinHandle,
-      href: site.linkedin,
-      external: true,
-    },
   ];
 
   return (
@@ -61,7 +54,7 @@ export default function Contact({
 
         <Reveal className="md:col-span-7" delay={140}>
           <dl className="overflow-hidden rounded-lg border border-hairline bg-surface">
-            {rows.map(({ icon: Icon, label, value, href, external }) => {
+            {rows.map(({ icon: Icon, label, value, href }) => {
               const content = (
                 <>
                   <dt className="flex items-center gap-2.5">
@@ -88,9 +81,6 @@ export default function Contact({
                 <a
                   key={label}
                   href={href}
-                  {...(external
-                    ? { target: '_blank', rel: 'noreferrer noopener' }
-                    : {})}
                   className={`${rowClass} transition-colors hover:bg-paper/70`}
                 >
                   {content}

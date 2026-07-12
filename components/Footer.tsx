@@ -1,4 +1,4 @@
-import { Linkedin, Mail } from 'lucide-react';
+import { Mail } from 'lucide-react';
 import type { Dictionary, Locale } from '@/lib/i18n';
 import { site } from '@/data/site';
 
@@ -22,15 +22,6 @@ export default function Footer({
         </div>
 
         <div className="flex items-center gap-4">
-          <a
-            href={site.linkedin}
-            target="_blank"
-            rel="noreferrer noopener"
-            aria-label={t.contact.linkedinLabel}
-            className="text-subink transition-colors hover:text-accent"
-          >
-            <Linkedin size={18} />
-          </a>
           <a
             href={`mailto:${site.email}`}
             aria-label={t.contact.emailLabel}
