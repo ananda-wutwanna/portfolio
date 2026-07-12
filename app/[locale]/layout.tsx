@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { fontVariables } from '@/lib/fonts';
 import { getDictionary, isLocale, locales, withBase, type Locale } from '@/lib/i18n';
+import { siteUrl } from '@/data/site';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
@@ -17,10 +18,12 @@ export async function generateMetadata({
   const locale = isLocale(params.locale) ? params.locale : 'th';
   const t = getDictionary(locale);
   return {
+    metadataBase: new URL(siteUrl),
     title: t.meta.title,
     description: t.meta.description,
     icons: {
-      icon: withBase('/favicon.svg'),
+      icon: withBase('/favicon.png'),
+      apple: withBase('/apple-icon.png'),
     },
     alternates: {
       languages: {
@@ -33,9 +36,7 @@ export async function generateMetadata({
       title: t.meta.title,
       description: t.meta.description,
       locale: locale === 'th' ? 'th_TH' : 'en_US',
-      // A 1200×630 SVG. For maximum compatibility with Facebook/LinkedIn,
-      // render it to og-image.png and switch this URL (see README).
-      images: [{ url: withBase('/og-image.svg'), width: 1200, height: 630 }],
+      images: [{ url: `${siteUrl}/og-image.png`, width: 1200, height: 630 }],
     },
     twitter: {
       card: 'summary_large_image',

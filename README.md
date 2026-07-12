@@ -23,23 +23,22 @@ npm run dev        # http://localhost:3000  → redirects to /th
 
 `npm run build` produces a static site in `out/`.
 
-## Fill these in before publishing
+## Live site
 
-Search for `TODO` — the values live in [`data/site.ts`](data/site.ts):
+**https://tezukastar.github.io/portfolio** — deployed via GitHub Actions on
+every push to `main`.
 
-- **GitHub URL** and handle
-- **LinkedIn URL** and handle
-- **Deployed site URL** (`siteUrl`, used by sitemap/robots/OG)
-- **Thai name spelling** (`site.name.th`) — currently a transliteration guess
-- **Resume PDFs** — replace the files in [`public/resume/`](public/resume/).
-  The Thai resume is currently a copy of the English one.
-- **OG image** — [`public/og-image.svg`](public/og-image.svg) is provided. For
-  best Facebook/LinkedIn support, render it to `public/og-image.png` and update
-  the `images` URL in [`app/[locale]/layout.tsx`](app/[locale]/layout.tsx).
+## Assets
+
+- **Resume PDFs** in [`public/resume/`](public/resume/) are rendered from
+  `../resume-src/` (see the README there). After replacing them, bump
+  `resumeVersion` in [`data/site.ts`](data/site.ts) to bust browser caches.
+- **Favicon / apple-icon / OG image** are generated PNGs in `public/`
+  (circular profile photo + green ring; 1200×630 OG card).
 - **3D hero scene** — `site.splineScene` in [`data/site.ts`](data/site.ts)
-  defaults to a public Spline robot template. Create/duplicate your own free
-  scene at [spline.design](https://spline.design) → **Export → Public URL**,
-  and paste it so the asset is stable and self-owned.
+  still points to a public Spline robot template. To self-own the asset,
+  duplicate a scene at [spline.design](https://spline.design) → **Export →
+  Public URL** and paste it there.
 
 ## Deploy to GitHub Pages
 
