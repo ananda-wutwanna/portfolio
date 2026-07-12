@@ -1,6 +1,7 @@
 import { Github, ArrowUpRight } from 'lucide-react';
 import type { Dictionary, Locale } from '@/lib/i18n';
 import type { Project } from '@/data/projects';
+import ImageGallery from './ImageGallery';
 
 function StackList({ tech }: { tech: string[] }) {
   return (
@@ -128,6 +129,16 @@ export default function ProjectCard({
               : 'border-t border-hairline pt-5'
           }`}
         >
+          {project.images && (
+            <div className="mb-5">
+              <ImageGallery
+                images={project.images}
+                videos={project.videos}
+                locale={locale}
+              />
+            </div>
+          )}
+
           <div>
             <span className="spec-key">{L.stack}</span>
             <div className="mt-2">

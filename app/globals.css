@@ -107,6 +107,24 @@
   .text-glow {
     text-shadow: 0 0 24px rgb(var(--c-accent) / 0.18);
   }
+
+  /* Resume preview — each PDF page floats in as a crisp white card. */
+  .resume-page {
+    overflow: hidden;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0 24px 60px -20px rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transform: translateY(18px) scale(0.985);
+    animation: resume-page-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  @keyframes resume-page-in {
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
 }
 
 @layer utilities {

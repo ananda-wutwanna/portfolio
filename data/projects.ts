@@ -17,6 +17,16 @@ export type Project = {
   highlights?: L[];
   systems?: { label: L; desc: L }[];
   result?: L;
+  // Photos and video clips of the real system, shown in a tabbed gallery
+  // (photos | on-site videos | control-UI videos) with a lightbox on the card.
+  images?: { src: string; label: L; alt: L }[];
+  videos?: {
+    src: string;
+    poster: string;
+    kind: 'onsite' | 'ui';
+    label: L;
+    alt: L;
+  }[];
   tech: string[];
   repo?: { label: string; url: string };
 };
@@ -88,6 +98,190 @@ export const projects: Project[] = [
         desc: {
           en: 'The central app that acts as the brain of the whole system — commanding and coordinating every subsystem, running the pick / place / move tray workflows from the crop plan, tracking where each tray is, and monitoring device status and the growing environment in real time from one place.',
           th: 'แอปศูนย์กลางที่เป็นสมองของทั้งระบบ — สั่งการและประสานทุกระบบย่อยให้ทำงานร่วมกัน สั่งหยิบ-วาง-ย้ายถาดตามแผนปลูก ติดตามตำแหน่งถาดทุกใบ และมอนิเตอร์สถานะอุปกรณ์กับสภาพแวดล้อมแบบเรียลไทม์ในหน้าเดียว',
+        },
+      },
+    ],
+    images: [
+      {
+        src: '/pfal/rgv.jpg',
+        label: { en: 'RGV', th: 'RGV' },
+        alt: {
+          en: 'RGV tray vehicle on its rail inside the plant factory',
+          th: 'รถ RGV บนรางภายในโรงงานปลูกพืช',
+        },
+      },
+      {
+        src: '/pfal/lift.jpg',
+        label: { en: 'Lift', th: 'ลิฟต์' },
+        alt: {
+          en: 'Tray lift tower inside the plant factory',
+          th: 'ลิฟต์ยกถาดภายในโรงงานปลูกพืช',
+        },
+      },
+      {
+        src: '/pfal/valve.jpg',
+        label: { en: 'Valves', th: 'วาล์วเติมน้ำ' },
+        alt: {
+          en: 'Water-refill valves across the growing layers',
+          th: 'วาล์วเติมน้ำเรียงตามชั้นปลูก',
+        },
+      },
+      {
+        src: '/pfal/light.jpg',
+        label: { en: 'Grow lights', th: 'ไฟปลูก' },
+        alt: {
+          en: 'LED grow-light bars and fans above the growing trays',
+          th: 'แผงไฟปลูก LED และพัดลมเหนือถาดปลูก',
+        },
+      },
+      {
+        src: '/pfal/water.jpg',
+        label: { en: 'Nutrient mixing', th: 'ระบบผสมสารอาหาร' },
+        alt: {
+          en: 'Nutrient mixing and dosing station with A/B pumps and tanks',
+          th: 'สถานีผสมและจ่ายสารอาหาร พร้อมปั๊ม A/B และถังปุ๋ย',
+        },
+      },
+    ],
+    videos: [
+      {
+        src: '/pfal/videos/automation-showcase.mp4',
+        poster: '/pfal/videos/automation-showcase-poster.jpg',
+        kind: 'onsite',
+        label: { en: 'System showcase', th: 'ภาพรวมระบบขนย้าย' },
+        alt: {
+          en: 'One continuous cut of the real system — the RGV running and crop trays being shuttled through the factory',
+          th: 'คลิปรวมระบบจริงต่อเนื่อง — รถ RGV วิ่ง และการขนถาดผักไปมาในโรงงาน',
+        },
+      },
+      {
+        src: '/pfal/videos/automation-put-onsite.mp4',
+        poster: '/pfal/videos/automation-put-onsite-poster.jpg',
+        kind: 'onsite',
+        label: { en: 'Tray put', th: 'สั่งเอาถาดขึ้น' },
+        alt: {
+          en: 'Commanding a tray put from the tablet on-site (2× speed)',
+          th: 'สั่งเอาถาดขึ้นชั้นปลูกจากแท็บเล็ตหน้างานจริง (เร่ง 2 เท่า)',
+        },
+      },
+      {
+        src: '/pfal/videos/automation-onsite.mp4',
+        poster: '/pfal/videos/automation-onsite-poster.jpg',
+        kind: 'onsite',
+        label: { en: 'Tray get', th: 'เอาถาดลง' },
+        alt: {
+          en: 'The real RGV and lift retrieving a crop tray on-site (5× speed)',
+          th: 'รถ RGV และลิฟต์จริงกำลังหยิบถาดพืชลงมาหน้างาน (เร่ง 5 เท่า)',
+        },
+      },
+      {
+        src: '/pfal/videos/rgv-onsite.mp4',
+        poster: '/pfal/videos/rgv-onsite-poster.jpg',
+        kind: 'onsite',
+        label: { en: 'RGV', th: 'รถ RGV' },
+        alt: {
+          en: 'The real RGV running on its rail (5× speed)',
+          th: 'รถ RGV วิ่งบนรางหน้างานจริง (เร่ง 5 เท่า)',
+        },
+      },
+      {
+        src: '/pfal/videos/lift-onsite.mp4',
+        poster: '/pfal/videos/lift-onsite-poster.jpg',
+        kind: 'onsite',
+        label: { en: 'Lift', th: 'ลิฟต์' },
+        alt: {
+          en: 'The real lift moving trays between floors (4× speed)',
+          th: 'ลิฟต์ยกถาดขึ้น-ลงหน้างานจริง (เร่ง 4 เท่า)',
+        },
+      },
+      {
+        src: '/pfal/videos/valve-onsite.mp4',
+        poster: '/pfal/videos/valve-onsite-poster.jpg',
+        kind: 'onsite',
+        label: { en: 'Valves', th: 'วาล์วเติมน้ำ' },
+        alt: {
+          en: 'The real water-refill valves in action (2× speed)',
+          th: 'วาล์วเติมน้ำทำงานจริง (เร่ง 2 เท่า)',
+        },
+      },
+      {
+        src: '/pfal/videos/light-onsite.mp4',
+        poster: '/pfal/videos/light-onsite-poster.jpg',
+        kind: 'onsite',
+        label: { en: 'Grow lights', th: 'ไฟปลูก' },
+        alt: {
+          en: 'The real LED grow lights in action (8× speed)',
+          th: 'ไฟปลูก LED ทำงานจริง (เร่ง 8 เท่า)',
+        },
+      },
+      {
+        src: '/pfal/videos/fert-onsite.mp4',
+        poster: '/pfal/videos/fert-onsite-poster.jpg',
+        kind: 'onsite',
+        label: { en: 'Nutrient mixing', th: 'ผสมปุ๋ย' },
+        alt: {
+          en: 'The real nutrient mixing and dosing in action (8× speed)',
+          th: 'ระบบผสมและจ่ายปุ๋ยทำงานจริง (เร่ง 8 เท่า)',
+        },
+      },
+      {
+        src: '/pfal/videos/rgv-control.mp4',
+        poster: '/pfal/videos/rgv-control-poster.jpg',
+        kind: 'ui',
+        label: { en: 'RGV control', th: 'ควบคุม RGV' },
+        alt: {
+          en: 'Commanding the RGV from the control platform (2× speed)',
+          th: 'สั่งงานรถ RGV จากแพลตฟอร์มควบคุม (เร่ง 2 เท่า)',
+        },
+      },
+      {
+        src: '/pfal/videos/lift-control.mp4',
+        poster: '/pfal/videos/lift-control-poster.jpg',
+        kind: 'ui',
+        label: { en: 'Lift control', th: 'ควบคุมลิฟต์' },
+        alt: {
+          en: 'Commanding the lift from the control platform (2× speed)',
+          th: 'สั่งงานลิฟต์จากแพลตฟอร์มควบคุม (เร่ง 2 เท่า)',
+        },
+      },
+      {
+        src: '/pfal/videos/valve-ui.mp4',
+        poster: '/pfal/videos/valve-ui-poster.jpg',
+        kind: 'ui',
+        label: { en: 'Valve control', th: 'ควบคุมวาล์ว' },
+        alt: {
+          en: 'Commanding the water-refill valves from the control platform (1.5× speed)',
+          th: 'สั่งเปิด-ปิดวาล์วเติมน้ำจากแพลตฟอร์มควบคุม (เร่ง 1.5 เท่า)',
+        },
+      },
+      {
+        src: '/pfal/videos/light-ui.mp4',
+        poster: '/pfal/videos/light-ui-poster.jpg',
+        kind: 'ui',
+        label: { en: 'Light control', th: 'ควบคุมไฟปลูก' },
+        alt: {
+          en: 'Controlling the grow lights across a tower from the control platform (3× speed)',
+          th: 'ควบคุมไฟปลูกทั้งทาวเวอร์จากแพลตฟอร์มควบคุม (เร่ง 3 เท่า)',
+        },
+      },
+      {
+        src: '/pfal/videos/fert-ui.mp4',
+        poster: '/pfal/videos/fert-ui-poster.jpg',
+        kind: 'ui',
+        label: { en: 'Nutrient dosing', th: 'ควบคุมผสมปุ๋ย' },
+        alt: {
+          en: 'Commanding fertilizer dosing from the control platform (4× speed)',
+          th: 'สั่งผสมและจ่ายปุ๋ยจากแพลตฟอร์มควบคุม (เร่ง 4 เท่า)',
+        },
+      },
+      {
+        src: '/pfal/videos/automation-realtime.mp4',
+        poster: '/pfal/videos/automation-realtime-poster.jpg',
+        kind: 'ui',
+        label: { en: 'Realtime monitor', th: 'มอนิเตอร์เรียลไทม์' },
+        alt: {
+          en: 'The automation page tracking the RGV and lift in real time during a task (2× speed)',
+          th: 'หน้า automation ติดตามตำแหน่ง RGV และลิฟต์แบบเรียลไทม์ระหว่างทำงาน (เร่ง 2 เท่า)',
         },
       },
     ],

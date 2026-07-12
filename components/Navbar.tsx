@@ -3,10 +3,11 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { Menu, X, FileDown } from 'lucide-react';
-import { withBase, type Dictionary, type Locale } from '@/lib/i18n';
+import type { Dictionary, Locale } from '@/lib/i18n';
 import { site } from '@/data/site';
 import LangToggle from './LangToggle';
 import ThemeToggle from './ThemeToggle';
+import ResumePreviewButton from './ResumePreview';
 
 export default function Navbar({
   locale,
@@ -40,8 +41,6 @@ export default function Navbar({
     { href: '#experience', label: t.nav.experience },
     { href: '#contact', label: t.nav.contact },
   ];
-
-  const resumeHref = withBase(site.resume[locale]);
 
   return (
     <header
@@ -88,14 +87,16 @@ export default function Navbar({
         <div className="flex items-center gap-2.5">
           <ThemeToggle />
           <LangToggle locale={locale} />
-          <a
-            href={resumeHref}
-            download
+          <ResumePreviewButton
+            locale={locale}
             className="hidden items-center gap-1.5 rounded-full bg-accent px-3.5 py-1.5 text-xs font-medium text-paper transition-opacity hover:opacity-90 sm:inline-flex"
-          >
-            <FileDown size={14} aria-hidden />
-            {t.nav.resume}
-          </a>
+            label={
+              <>
+                <FileDown size={14} aria-hidden />
+                {t.nav.resume}
+              </>
+            }
+          />
           <button
             type="button"
             className="inline-grid h-9 w-9 place-items-center rounded-md border border-hairline bg-surface text-ink md:hidden"
@@ -125,15 +126,17 @@ export default function Navbar({
               </li>
             ))}
             <li>
-              <a
-                href={resumeHref}
-                download
-                onClick={() => setOpen(false)}
-                className="mt-3 flex items-center justify-center gap-2 rounded-full bg-accent px-4 py-2.5 text-sm font-medium text-paper"
-              >
-                <FileDown size={16} aria-hidden />
-                {t.nav.resume}
-              </a>
+              <ResumePreviewButton
+                locale={locale}
+                onOpen={() => setOpen(false)}
+                className="mt-3 flex w-full items-center justify-center gap-2 rounded-full bg-accent px-4 py-2.5 text-sm font-medium text-paper"
+                label={
+                  <>
+                    <FileDown size={16} aria-hidden />
+                    {t.nav.resume}
+                  </>
+                }
+              />
             </li>
           </ul>
         </div>

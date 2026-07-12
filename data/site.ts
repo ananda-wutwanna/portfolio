@@ -12,13 +12,13 @@ export const site = {
   phoneHref: '+66825924747',
   linkedin: 'https://www.linkedin.com/in/ananda-wutwanna-156847343/',
   linkedinHandle: 'ananda-wutwanna',
-  // Resume files live in public/resume/.
+  // Resume files live in public/resume/. Bump resumeVersion whenever the
+  // PDFs are replaced so browsers fetch the new files instead of a cached copy.
+  resumeVersion: '2026-07-12.6',
   resume: {
     en: '/resume/Ananda_Wutwanna_Resume.pdf',
     th: '/resume/Ananda_Wutwanna_Resume_TH.pdf',
   },
-  // Chips shown in the hero.
-  techChips: ['MQTT', 'Modbus', 'FastAPI', 'React', 'Python', 'ESP32'],
   // 3D hero scene (Spline). This default is a public Spline robot template.
   // TODO: create/duplicate your own free scene at https://spline.design,
   // "Export → Public URL", and paste it here for a stable, self-owned asset.

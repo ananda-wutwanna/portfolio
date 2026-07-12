@@ -1,7 +1,8 @@
-import { ArrowRight, FileDown, MapPin } from 'lucide-react';
-import { withBase, type Dictionary, type Locale } from '@/lib/i18n';
+import { ArrowRight, FileText, MapPin } from 'lucide-react';
+import type { Dictionary, Locale } from '@/lib/i18n';
 import { site } from '@/data/site';
 import SplineRobot from './SplineRobot';
+import ResumePreviewButton from './ResumePreview';
 
 export default function Hero({
   locale,
@@ -11,7 +12,6 @@ export default function Hero({
   t: Dictionary;
 }) {
   const name = site.name[locale];
-  const resumeHref = withBase(site.resume[locale]);
 
   return (
     <section
@@ -90,14 +90,16 @@ export default function Hero({
                 aria-hidden
               />
             </a>
-            <a
-              href={resumeHref}
-              download
+            <ResumePreviewButton
+              locale={locale}
               className="inline-flex items-center gap-2 rounded-full border border-hairline bg-surface/60 px-5 py-2.5 text-sm font-medium text-ink backdrop-blur-sm transition-colors hover:border-accent"
-            >
-              <FileDown size={16} aria-hidden />
-              {t.hero.downloadResume}
-            </a>
+              label={
+                <>
+                  <FileText size={16} aria-hidden />
+                  {t.hero.downloadResume}
+                </>
+              }
+            />
           </div>
 
         </div>
