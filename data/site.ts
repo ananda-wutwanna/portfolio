@@ -1,6 +1,5 @@
-// Central site config. Fill in the placeholder links marked "TODO".
-// TODO: set this to your deployed URL, e.g. https://<user>.github.io/<repo>
-export const siteUrl = 'https://your-github.github.io/portfolio';
+// Central site config.
+export const siteUrl = 'https://tezukastar.github.io/portfolio';
 
 export const site = {
   name: {
