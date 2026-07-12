@@ -1,5 +1,5 @@
 // Central site config.
-export const siteUrl = 'https://tezukastar.github.io/portfolio';
+export const siteUrl = 'https://ananda-wutwanna.github.io/portfolio';
 
 export const site = {
   name: {
