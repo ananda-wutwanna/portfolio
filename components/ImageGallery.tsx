@@ -146,6 +146,7 @@ export default function ImageGallery({
             aria-modal="true"
             aria-label={current.alt[locale]}
             onClick={() => setOpen(false)}
+            onContextMenu={(e) => e.preventDefault()}
           >
             <div className="flex items-center justify-between p-4">
               <span className="rounded-full bg-white/10 px-3 py-1 font-mono text-xs uppercase tracking-label text-white">
@@ -171,6 +172,9 @@ export default function ImageGallery({
                   src={withBase(current.src)}
                   poster={withBase((current as GalleryVideo).poster)}
                   controls
+                  controlsList="nodownload noremoteplayback"
+                  disablePictureInPicture
+                  onContextMenu={(e) => e.preventDefault()}
                   autoPlay
                   muted
                   playsInline
