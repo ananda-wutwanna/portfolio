@@ -31,7 +31,7 @@
   },
   "about": {
     "heading": "I design and build systems across software and hardware.",
-    "body": "An engineer who analyzes, designs, and builds systems around what they actually need to do. I like seeing the whole picture — working out what a job really needs, then building the pieces so they work together. I've worked both sides of it: on the hardware side, writing the programs that drive devices like motors, valves, and sensors and handling the communication between them; on the software side, building the frontend and backend, the APIs, and the platforms that command and monitor everything in real time. I can take a system from gathering requirements and designing the architecture, to writing the code, to installing and troubleshooting it on-site.",
+    "body": "An engineer who analyzes, designs, and builds systems around what they actually need to do. I like seeing the whole picture — working out what a job really needs, then building the pieces so they work together. I've worked both sides of it: on the hardware side, writing the programs that drive devices like stepper motors, motorized valves, and sensors and handling the communication between them; on the software side, building the frontend and backend, the APIs, and the platforms that command and monitor everything in real time. I can take a system from gathering requirements and designing the architecture, to writing the code, to installing and troubleshooting it on-site.",
     "educationLabel": "Education",
     "education": "B.Eng. in Computer Engineering",
     "educationOrg": "Naresuan University",

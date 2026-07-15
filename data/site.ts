@@ -11,7 +11,7 @@ export const site = {
   phoneHref: '+66825924747',
   // Resume files live in public/resume/. Bump resumeVersion whenever the
   // PDFs are replaced so browsers fetch the new files instead of a cached copy.
-  resumeVersion: '2026-07-12.6',
+  resumeVersion: '2026-07-13',
   resume: {
     en: '/resume/Ananda_Wutwanna_Resume.pdf',
     th: '/resume/Ananda_Wutwanna_Resume_TH.pdf',
