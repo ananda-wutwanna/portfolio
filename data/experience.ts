@@ -35,7 +35,7 @@ export const experience: ExperienceEntry[] = [
   },
   {
     id: 'edvisory',
-    org: { en: 'Edvisory', th: 'Edvisory' },
+    org: { en: 'EDVISORY Tech', th: 'EDVISORY Tech' },
     period: { en: '2025 – Oct 2025', th: '2568 – ต.ค. 2568' },
     roles: [
       {
